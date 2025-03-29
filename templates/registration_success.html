@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register User</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+<h7>🎉 Registration Successful!</h7>
+<p>Your User ID is: <strong>{{ user_id }}</strong></p>
+<p>Please keep it safe. You'll need this ID when registering your device.</p>
+<a href="{{ url_for('login') }}">Login now</a>
+</body>
+</html>

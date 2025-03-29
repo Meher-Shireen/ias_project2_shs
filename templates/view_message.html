@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Message</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class = "content-wrapper">
+    <div class = "container">
+    <h7>Received Message</h7>
+        <div class="container-s">
+    <p>{{ message }}</p></div>
+    <!-- <a href="{{ url_for('index') }}">Back to Home</a> -->
+    </div>
+    </div>
+    <div class = "content-wrapper">
+    <a href="{{ url_for('index') }}" class = "button-vm">Back to Home</a></div>
+</body>
+</html>

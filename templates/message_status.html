@@ -1,0 +1,87 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Message Status</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>Message Status</h2>
+    
+    {% if error %}
+        <div class="error-box">
+            <h3>Error Sending Message</h3>
+            <p><strong>Code {{ status_code }}:</strong> {{ error }}</p>
+            {% if status_code >= 500 %}
+                <p>Please try again later.</p>
+            {% else %}
+                <p>Please check your input and try again.</p>
+            {% endif %}
+        </div>
+    {% else %}
+        <div class="success-box">
+            <h3>Message Sent Successfully!</h3>
+            <div class="message-details">
+                <p><strong>To Device:</strong> {{ device_id }}</p>
+                <p><strong>Message:</strong> {{ message }}</p>
+                {% if response %}
+                    <p><strong>Server Response:</strong> {{ response }}</p>
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+    
+    <div class="actions">
+        <a href="{{ url_for('send_to_device') }}" class="button">Send Another</a>
+        <a href="{{ url_for('index') }}" class="button">Back to Home</a>
+    </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Message Status</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Add the navbar -->
+    
+
+    <!-- Main content container -->
+    <div class="container">
+        <h2>Message Status</h2>
+        
+        {% if error %}
+            <div class="error-box">
+                <h3>Error Sending Message</h3>
+                <p><strong>Code {{ status_code }}:</strong> {{ error }}</p>
+                {% if status_code >= 500 %}
+                    <p>Please try again later.</p>
+                {% else %}
+                    <p>Please check your input and try again.</p>
+                {% endif %}
+            </div>
+        {% else %}
+            <div class="success-box">
+                <h7>Message Sent Successfully!</h7>
+                <div class="message-details">
+                    <p><strong>To Device:</strong> {{ device_id }}</p>
+                    <p><strong>Message:</strong> {{ message }}</p>
+                    {% if response %}
+                        <p><strong>Server Response:</strong> {{ response }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        {% endif %}
+        
+        <div class="actions">
+            <a href="{{ url_for('send_to_device') }}" class="button">Send Another</a>
+            <a href="{{ url_for('index') }}" class="button">Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
