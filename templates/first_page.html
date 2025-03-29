@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT352 Course Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8e8;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            text-align: center;
+        }
+        .button-container {
+            position: absolute;
+            right: 20%;
+            top: 60%;
+            transform: translateY(-50%);
+        }
+        .button {
+            display: block;
+            width: 300px;
+            padding: 15px;
+            margin: 15px 0;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .button:hover {
+            background-color: #357abd;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>DEPARTMENT OF INFORMATION TECHNOLOGY</h1>
+        <h2>NATIONAL INSTITUTE OF TECHNOLOGY KARNATAKA, SURATHKAL-575025</h2>
+    </div>
+    
+    <div class="container">
+        <h3>Information Assurance and Security (IT352) Course Project</h3>
+        <h3>Title: “Smart Home Security: An Efficient Multi-Factor
+            Authentication Protocol”</h3>
+        <p><strong>Carried out by</strong></p>
+        <p><strong>Anshah Hegde (221IT009)</strong></p>
+        <p><strong>P Meher Shireen (221IT049)</strong></p>
+        <p><strong>During Academic Session January – April 2025</strong></p>
+    </div>
+
+    <div class="button-container">
+        <a href="{{ url_for('login') }}">Press here to enter into website</a>
+        <a href="display_output.html" class="button">Press here to display output on Screen</a>
+        <a href="store_output.html" class="button">Press here to store the output</a>
+    </div>
+</body>
+</html>
